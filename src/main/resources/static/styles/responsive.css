@@ -1,0 +1,145 @@
+body {
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #3366AA;
+    color: #FFFFFF;
+    
+    position: relative;
+    
+    text-align: center;
+    
+    height: 80px;
+    
+    padding: 24px;
+    margin: 0;
+    
+    z-index: 2000;
+}
+
+.header h1 {
+    font-family: sans-serif;
+    
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    height: 60px;
+    
+    position: sticky;
+    top: 0;
+    
+    z-index: 1000;
+}
+
+.nav-responsive {
+    background-color: #4477CC;
+    
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+    
+    z-index: 1200;
+}
+
+.nav-responsive__a-container {
+    background-color: #4477CC;
+    
+    width: 100%;
+    
+    position: relative;
+    bottom: 100vh;
+    
+    display: flex;
+    
+    transition: transform .35s ease-in-out;
+    
+    z-index: 800;
+}
+
+.nav-responsive__a, .nav-normal__a {
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #FFFFFF;
+    
+}
+
+.nav-responsive__a:hover, .nav-normal__a:hover {
+    background-color: #6699FF;
+}
+
+.nav-responsive__a i, .nav-normal__a i {
+    margin-right: 4px;
+}
+
+.nav-responsive__a {
+    width: 100%;
+    
+    padding: 6px;
+    
+    z-index: 805;
+}
+
+.nav-responsive__button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    
+    height: 100%;
+    margin: 0;
+}
+
+.nav-responsive__button {
+    color: #FFFFFF;
+    
+    cursor: pointer;
+    
+    font-size: 32px;
+    
+    padding: 14px;
+}
+
+.nav-normal {
+    display: none;
+}
+
+.main {
+    position: relative;
+    flex-grow: 1;
+}
+
+.footer {
+    background: #3366AA;
+    height: 80px;
+}
+
+@media screen and (min-width: 600px) {
+    .nav-responsive {
+        display: none;
+    }
+    
+    .nav-normal {
+        background: #4477CC;
+        display: flex;
+        
+        height: 100%;
+    }
+    
+    .nav-normal__a {
+        height: 100%;
+        
+        padding: 8px;
+        
+        display: flex;
+        align-items: center;
+    }
+}
