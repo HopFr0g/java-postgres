@@ -1,5 +1,7 @@
 package me.glitch.leonelpoletti.javapostgres.dao;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -13,6 +15,13 @@ import me.glitch.leonelpoletti.javapostgres.models.User;
 @Repository
 @Transactional
 public class UserDaoImp implements UserDao {
+    // Used in .getUsers() to avoid errors with the List<User> return:
+    private static <T> List<T> castList(Class<? extends T> clazz, Collection<?> c) {
+        List<T> r = new ArrayList<T>(c.size());
+        for(Object o: c)
+          r.add(clazz.cast(o));
+        return r;
+    }
     
     @PersistenceContext
     private EntityManager entityManager;
@@ -20,7 +29,7 @@ public class UserDaoImp implements UserDao {
     @Override
     public List<User> getUsers() {
         String query = "from User";
-        return entityManager.createQuery(query).getResultList();
+        return castList(User.class, entityManager.createQuery(query).getResultList());
     }
 
     @Override
