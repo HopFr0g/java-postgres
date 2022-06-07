@@ -1,4 +1,4 @@
-package me.glitch.leonelpoletti.javapostgres.repositories;
+package me.glitch.leonelpoletti.javapostgres.models;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
