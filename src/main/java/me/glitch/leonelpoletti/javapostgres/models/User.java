@@ -48,4 +48,8 @@ public class User {
     public String getDescription() {
         return this.description;
     }
+    
+    public String toString() {
+        return this.getId() + " " + this.getUsername() + " " + this.getEmail() + " " + this.getDescription();
+    }
 }
