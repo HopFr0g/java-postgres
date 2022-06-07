@@ -1,6 +1,7 @@
 package me.glitch.leonelpoletti.javapostgres.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,11 @@ public class UserController implements UserDao{
     @RequestMapping(value = "users", method = RequestMethod.GET)
     public List<User> getUsers() {
         return userDao.getUsers();
+    }
+    
+    @RequestMapping(value = "users/{id}", method = RequestMethod.DELETE)
+    public void deleteUser(@PathVariable Integer id) {
+        userDao.deleteUser(id);
     }
 }
 
