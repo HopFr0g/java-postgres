@@ -1,8 +1,7 @@
 package me.glitch.leonelpoletti.javapostgres.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,11 +9,16 @@ import javax.persistence.Table;
 @Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
     
+    @Column(name = "username")
     private String username;
+    
+    @Column(name = "email")
     private String email;
+    
+    @Column(name = "description")
     private String description;
     
     public void setId(Integer id) {
@@ -50,6 +54,6 @@ public class User {
     }
     
     public String toString() {
-        return this.getId() + " " + this.getUsername() + " " + this.getEmail() + " " + this.getDescription();
+        return "id: " + this.id + ", username: " + this.username + ", email: " + this.email + ", description: " + this.description;
     }
 }

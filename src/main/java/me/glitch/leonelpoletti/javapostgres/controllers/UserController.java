@@ -1,34 +1,31 @@
 package me.glitch.leonelpoletti.javapostgres.controllers;
 
-import org.apache.tomcat.util.http.parser.MediaType;
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.data.jpa.provider.HibernateUtils;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
+import me.glitch.leonelpoletti.javapostgres.dao.UserDao;
 import me.glitch.leonelpoletti.javapostgres.models.User;
-import me.glitch.leonelpoletti.javapostgres.models.UserRepository;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.transaction.Transactional;
-
 @RestController
-public class UserController {
+public class UserController implements UserDao{
+    @Autowired
+    private UserDao userDao;
+    
+    @RequestMapping(value = "users", method = RequestMethod.GET)
+    public List<User> getUsers() {
+        return userDao.getUsers();
+    }
+}
+
+
+
+
+
+/*
     @Autowired
     private UserRepository userRepo;
     
@@ -78,4 +75,4 @@ public class UserController {
         List<User> users = userRepo.findAll();
         return users;
     }
-}
+    */
