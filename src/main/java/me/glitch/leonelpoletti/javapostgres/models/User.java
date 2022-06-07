@@ -11,16 +11,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "users")
 public class User {
-    /*@Id
-    @Column(name = "id")*/
-    
-    /*
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "id",unique=true, nullable = false)
-     */
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
@@ -66,9 +56,5 @@ public class User {
     
     public String getDescription() {
         return this.description;
-    }
-    
-    public String toString() {
-        return "id: " + this.id + ", username: " + this.username + ", email: " + this.email + ", description: " + this.description;
     }
 }

@@ -29,62 +29,6 @@ public class UserController implements UserDao{
     
     @RequestMapping(value = "users", method = RequestMethod.POST)
     public void addUser(@RequestBody User user) {
-        userDao.addUser(user); // TODO 2:48:00
+        userDao.addUser(user);
     }
 }
-
-
-
-
-
-/*
-    @Autowired
-    private UserRepository userRepo;
-    
-    @Transactional
-    public void insertar(String json) throws Exception {
-        ObjectMapper objectMapper = new ObjectMapper();
-        User user = objectMapper.readValue(json, User.class);
-        
-        System.out.println(user.toString()); // TODO
-    }
-    
-    // Create:
-    @RequestMapping(value = "users/add", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
-    public void getJson(HttpEntity<String> httpEntity) {
-        String json = httpEntity.getBody();
-        
-        try {
-            System.out.println(json); // TODO
-            insertar(json);
-        } catch (Exception e) {
-            System.out.print("ERROR: ");
-            System.out.print(e);
-        }
-    }
-    
-    // Create:
-    // @RequestMapping(value = "users/add", method = RequestMethod.POST)
-    // public void createUser(User user) {
-    //     System.out.println(user.toString());
-    // }
-    
-    // Modify:
-    @RequestMapping(value = "users/modify", method = RequestMethod.POST)
-    public void modifyUser() {
-        
-    }
-    
-    // Delete:
-    @RequestMapping(value = "users/remove/{userName}", method = RequestMethod.GET)
-    public void deleteUser(@PathVariable("userName") String userName) {
-        
-    }
-    
-    // Find all:
-    @RequestMapping(value = "users", method = RequestMethod.GET)
-    public List<User> getUsers() {
-        List<User> users = userRepo.findAll();
-        return users;
-    }
-    */
