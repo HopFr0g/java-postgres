@@ -41,14 +41,22 @@
         </nav>
         
         <main class="main">
+            <h2>Users list</h2>
+            <p>Check the list of users saved in the database and delete or create new users.</p>
             <div class="main__blur"></div>
+            <div class="add-entry" action="/users">
+                <input type="text" class="add-entry__username" placeholder="user name">
+                <input type="text" class="add-entry__email" placeholder="e-mail">
+                <input type="text" class="add-entry__description" placeholder="description">
+                <button class="add-entry__submit">Add user</button>
+            </div>
         </main>
         
         <footer class="footer">
             <p>Created by HopFr0g</p>
         </footer>
         
-        <script src="scripts/index.js"></script>
+        <script src="scripts/index.js" type="module"></script>
         <script src="scripts/responsive.js"></script>
     </body>
 </html>

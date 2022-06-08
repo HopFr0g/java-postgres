@@ -1,0 +1,111 @@
+.main {
+    text-align: center;
+}
+
+.main h2, .main p {
+    color:#000080;
+    font-family: sans-serif;
+}
+
+.main h2 {
+    font-size: 28pt;
+}
+
+.main p {
+    font-size: 16pt;
+    margin: 10px 0 32px 0;
+}
+
+.entry {
+    background: #00000020;
+    
+    display: flex;
+    flex-direction: column;
+    
+    padding: 10px;
+    margin: 20px auto;
+    
+    min-width: 280px;
+    max-width: 400px;
+    
+    position: relative;
+}
+
+.entry h4, .entry h6, .entry p, .entry b {
+    font-family: sans-serif;
+    color: #000080;
+}
+
+.entry h6 {
+    margin: 6px 0 16px 0;
+}
+
+.entry h4, .entry h6 {
+    text-align: left;
+}
+
+.entry p {
+    font-size: 10pt;
+}
+
+.entry b {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    
+    color: #880000;
+    
+    font-size: 9pt;
+    text-decoration: none;
+    
+    cursor: pointer;
+}
+            
+.add-entry {
+    background: #00000020;
+    
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    
+    margin: auto;
+    padding: 10px;
+    
+    width: 80%;
+    max-width: 400px;
+}
+
+.add-entry input {
+    height: 32px;
+    width: 100%;
+    
+    margin: 8px 0;
+    padding: 8px;
+    
+    font-size: 16px;
+    
+    border: none;
+}
+
+.add-entry input:active, .add-entry input:focus {
+    border: none;
+    outline: none;
+}
+
+.add-entry__submit {
+    height: 32px;
+    width: 100%;
+    
+    margin-top: 16px;
+    
+    border: none;
+    
+    background: #3366AA;
+    color: #FFFFFF;
+}
+
+.add-entry__submit:hover {
+    background: #4477CC;
+}
