@@ -1,14 +1,14 @@
 ## EJEMPLO PARA UN PROYECTO LLAMADO "Project" Y UNA TABLA EN LA BASE DE DATOS LLAMADA "User"
 
 
-### /src/main/.../controllers/
+### /src/main/[...]/controllers/
 - UserController.java: recibe los HTTP request para modificar la base de datos
-### /src/main/.../dao/
+### /src/main/[...]/dao/
 - UserDao.java (interface): declara los métodos que se utilizan para modificar la base de datos
 - UserDaoImp.java: implementa dichos métodos
-### /src/main/.../models/
+### /src/main/[...]/models/
 - User.java: define los nombres y tipo que tiene cada columna de la tabla User en la base de datos, getters y setters
-### /src/main/.../
+### /src/main/[...]/
 - ProjectApplication.java: incluye la función main() que inicia el servidor
 ### /src/main/resources/
 - application.properties: propiedades de la aplicación (por ejemplo, datos para conectarse con la db)
