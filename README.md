@@ -1,5 +1,6 @@
 ## EJEMPLO PARA UN PROYECTO LLAMADO "Project" Y UNA TABLA EN LA BASE DE DATOS LLAMADA "User"
 
+
 ### /src/main/.../controllers/
 - UserController.java: recibe los HTTP request para modificar la base de datos
 ### /src/main/.../dao/
@@ -20,7 +21,8 @@
 ### /
 - pom.xml: contiene las dependencias
 
-#### UserController:
+
+#### UserController.java:
 ```java
 package [...].controllers;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +53,8 @@ public class UserController implements UserDao{
 }
 ```
 
-#### UserDao:
+
+#### UserDao.java:
 ```java
 package [...].dao;
 import [...].models.User;
@@ -63,7 +66,8 @@ public interface UserDao {
 }
 ```
 
-#### UserDaoImp:
+
+#### UserDaoImp.java:
 ```java
 package [...].dao;
 import java.util.List;
@@ -95,7 +99,8 @@ public class UserDaoImp implements UserDao {
 }
 ```
 
-#### User:
+
+#### User.java:
 ```java
 package [...].models;
 import javax.persistence.Basic;
@@ -146,12 +151,14 @@ public class User {
 }
 ```
 
+
 #### application.properties:
 ```yml
 spring.datasource.url=jdbc:postgresql://localhost:5432/leonel_db
 spring.datasource.username=leonel
 spring.datasource.password=19990829
 ```
+
 
 #### pom.xml (principales dependencias):
 ```xml
