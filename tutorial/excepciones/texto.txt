@@ -1,0 +1,1 @@
+Este es un ejemplo leído desde un archivo .txt
