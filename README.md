@@ -2,24 +2,24 @@
 
 
 ### /src/main/[...]/controllers/
-- UserController.java: recibe los HTTP request para modificar la base de datos
+- **UserController.java**: recibe los HTTP request para modificar la base de datos
 ### /src/main/[...]/dao/
-- UserDao.java (interface): declara los métodos que se utilizan para modificar la base de datos
-- UserDaoImp.java: implementa dichos métodos
+- **UserDao.java (interface)**: declara los métodos que se utilizan para modificar la base de datos
+- **UserDaoImp.java**: implementa dichos métodos
 ### /src/main/[...]/models/
-- User.java: define los nombres y tipo que tiene cada columna de la tabla User en la base de datos, getters y setters
+- **User.java**: define los nombres y tipo que tiene cada columna de la tabla User en la base de datos, getters y setters
 ### /src/main/[...]/
-- ProjectApplication.java: incluye la función main() que inicia el servidor
+- **ProjectApplication.java**: incluye la función main() que inicia el servidor
 ### /src/main/resources/
-- application.properties: propiedades de la aplicación (por ejemplo, datos para conectarse con la db)
+- **application.properties**: propiedades de la aplicación (por ejemplo, datos para conectarse con la db)
 ### /src/main/resources/static/
-- img/: carpeta con imágenes que pueden ser accedidas por el cliente
-- scripts/: carpeta con scripts que pueden ser accedidos por el cliente
-- styles/: carpeta con estilos css que pueden ser accedidos por el cliente
-- index.html: archivo html que puede ser accedido por el cliente
-- favicon.ico: ícono de la página
+- **img/**: carpeta con imágenes que pueden ser accedidas por el cliente
+- **scripts/**: carpeta con scripts que pueden ser accedidos por el cliente
+- **styles/**: carpeta con estilos css que pueden ser accedidos por el cliente
+- **index.html**: archivo html que puede ser accedido por el cliente
+- **favicon.ico**: ícono de la página
 ### /
-- pom.xml: contiene las dependencias
+- **pom.xml**: contiene las dependencias
 
 
 #### UserController.java:
