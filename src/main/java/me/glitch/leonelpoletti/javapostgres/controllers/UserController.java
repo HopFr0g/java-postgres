@@ -31,4 +31,9 @@ public class UserController implements UserDao{
     public void addUser(@RequestBody User user) {
         userDao.addUser(user);
     }
+    
+    @RequestMapping(value = "consumirrest", method = RequestMethod.GET)
+    public void consumirRest() {
+        userDao.consumirRest();
+    }
 }
