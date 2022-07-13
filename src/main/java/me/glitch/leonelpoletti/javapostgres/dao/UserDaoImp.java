@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import me.glitch.leonelpoletti.javapostgres.libs.ListCaster;
+import me.glitch.leonelpoletti.javapostgres.models.ImagenPerro;
 import me.glitch.leonelpoletti.javapostgres.models.User;
 
 @Repository
