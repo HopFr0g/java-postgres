@@ -33,4 +33,13 @@ public class UserDaoImp implements UserDao {
     public void addUser(User user) {
         entityManager.merge(user);
     }
+    
+    @Override
+    public void consumirRest() {
+        RestTemplateBuilder builder = new RestTemplateBuilder();
+        RestTemplate restTemplate = builder.build();
+        ImagenPerro imagenPerro = restTemplate.getForObject("https://dog.ceo/api/breeds/image/random", ImagenPerro.class);
+        String str = imagenPerro.toString();
+        System.out.println(str);
+    }
 }
